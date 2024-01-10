@@ -137,7 +137,8 @@ function AiForm() {
                   </AlertDialogTitle>
                 </AlertDialogHeader>
                 <AlertDialogDescription className="w-full max-w-[25rem]">
-                  {allArticles.reverse().map((item, index) => (
+                  {allArticles.length<=0 && <p>No History found. Please search for articles.</p>}
+                  {allArticles && allArticles.reverse().map((item, index) => (
                     <div
                       key={`link-${index}`}
                       onClick={() => setArticle(item)}
@@ -165,7 +166,7 @@ function AiForm() {
             </AlertDialog>
           </div>
         </div>
-        <Button className="max-w-[40%] mt-5" type="submit">
+        <Button className="max-w-[40%] bg-gradient-to-br font-dmsans from-purple-400 to-blue-300 hover:to-purple-400 hover:from-blue-300  mt-4" type="submit">
           Summarize
         </Button>
       </form>
