@@ -1,31 +1,32 @@
-# nextjs14-template
+# Article Summarizer using GPT-4
 
-A Next.js 14 template for building apps with Radix UI and Tailwind CSS.
+This is a simple AI summarizer built with **Next.js**, **Tailwind CSS**, and **TypeScript**. It's deployed on **Vercel** and powered by **RapidAPI**.
 
-## Usage
+## Setup and Usage
 
-```bash
-npx create-next-app -e https://github.com/AntonyJudeShaman/nextjs14-template.git
-```
+Follow these steps to set up and run the application:
 
-## Features
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/AntonyJudeShaman/article-summarizer.git
+    ```
 
-- Next.js 14 App Directory
-- Radix UI Primitives
-- Tailwind CSS
-- Icons from [Lucide](https://lucide.dev)
-- Dark mode with `next-themes`
-- Tailwind CSS class sorting, merging and linting
-- Shadcn UI Components
-- 5 Different fonts
-- Responsive Navigation bar
+2. Install the dependencies. This project uses `pnpm`:
+    ```bash
+    pnpm i
+    ```
 
-## License
+3. Create a `.env` file and set your RapidAPI key:
+    ```bash
+    echo "NEXT_PUBLIC_API_ARTICLE_KEY=<RAPID-API-KEY>" > .env
+    ```
+    You can get your API key from [RapidAPI](https://rapidapi.com/restyler/api/article-extractor-and-summarizer)
 
-Licensed under the [MIT license](https://github.com/shadcn/ui/blob/main/LICENSE.md).
-
-## Acknowledgements
-
-This template is based on the [next-template](https://github.com/shadcn-ui/next-template) by [Shadcn](https://ui.shadcn.com).
-
-Modifications and improvements by [Antony Jude Shaman](https://github.com/AntonyJudeShaman).
+4. To run the application, use the following command:
+    ```bash
+    pnpm dev
+    ```
+    or
+    ```bash
+    npm dev
+    ```
